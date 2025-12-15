@@ -1,0 +1,79 @@
+@extends('layouts.admin')
+@section('page-title')
+    {{__('Manage Asuransi Lainnya')}}
+@endsection
+@section('breadcrumb')
+    <li class="breadcrumb-item"><a href="{{route('dashboard')}}">{{__('Dashboard')}}</a></li>
+    <li class="breadcrumb-item">{{__('Asuransi Lainnya')}}</li>
+@endsection
+
+@section('action-btn')
+    <div class="float-end d-flex">
+        <a href="#" data-url="{{ route('asuransi-lainnya.create') }}" data-ajax-popup="true" data-title="{{__('Tambah Asuransi Lainnya')}}" data-bs-toggle="tooltip" title="{{__('Tambah Asuransi Lainnya')}}"  class="btn btn-sm btn-primary">
+            <i class="ti ti-plus"></i>
+        </a>
+    </div>
+@endsection
+
+@section('content')
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+        <div class="card-body table-border-style">
+                    <div class="table-responsive">
+                    <table class="table datatable">
+                            <thead>
+                            <tr>
+                                <th>{{__('Employee ID')}}</th>
+                                <th>{{__('Name')}}</th>
+                                <th>{{__('Lama Bekerja')}}</th>
+                                <th>{{__('Gaji')}}</th>
+                                <th>{{__('NO Asuransi')}}</th>
+                                <th>{{__('Jenis Asuransi')}}</th>
+                                <th>{{__('Nominal Asuransi') }}</th>
+                                <th width="200px">{{__('Action')}}</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($insuranceMedicals as $employee)
+                                <tr>
+                                    <td class="Id">
+                                        @can('show employee profile')
+                                            <a href="{{route('employee.show',\Illuminate\Support\Facades\Crypt::encrypt($employee->employee->id))}}" class="btn btn-outline-primary">{{ \Auth::user()->employeeIdFormat($employee->employee->employee_id) }}</a>
+                                        @else
+                                            <a href="#"  class="btn btn-outline-primary">{{ \Auth::user()->employeeIdFormat($employee->employee->employee_id) }}</a>
+                                        @endcan
+                                    </td>
+                                    <td class="font-style">{{ $employee->employee->name }}</td>
+                                    <td>{{ $employee->employee->lama_bekerja }}</td>
+                                    <td>{{ number_format(@$employee->employee->salary, 0, ',', '.') }}</td>
+                                    <td>{{ @$employee->policy_number }}</td>
+                                    <td>{{ @$employee->provider }}</td>
+                                    <td>{{ number_format(@$employee->nominal, 0, ',', '.') }}</td>
+                                    @if(Gate::check('edit employee') || Gate::check('delete employee'))
+                                        <td>
+                                            <div class="action-btn me-2">
+                                                <a href="#" data-url="{{ route('asuransi-lainnya.edit',$employee->id)}}" data-size="lg" data-ajax-popup="true" data-title="{{__('Edit Asuransi Lainnya')}}" class="mx-3 btn btn-sm align-items-center bg-info" data-bs-toggle="tooltip" title="{{__('Edit')}}" data-original-title="{{__('Edit Asuransi Lainnya')}}"><i class="ti ti-pencil text-white"></i></a>
+                                            </div>
+                                            <div class="action-btn ">
+                                                {!! Form::open(['method' => 'DELETE', 'route' => ['asuransi-lainnya.destroy', $employee->id],'id'=>'delete-form-'.$employee->id]) !!}
+
+                                                <a href="#" class=" btn btn-sm align-items-center bs-pass-para bg-danger" data-bs-toggle="tooltip" title="{{__('Delete')}}" data-original-title="{{__('Delete')}}" data-confirm="{{__('Are You Sure?').'|'.__('This action can not be undone. Do you want to continue?')}}" data-confirm-yes="document.getElementById('delete-form-{{$employee->id}}').submit();">
+                                                    <i class="ti ti-trash text-white"></i>
+                                                </a>
+                                                {!! Form::close() !!}
+                                            </div>
+                                        </td>
+                                    @endif
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

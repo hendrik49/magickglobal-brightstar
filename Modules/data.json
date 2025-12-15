@@ -1,0 +1,213 @@
+{
+    "status": true,
+    "message": "put data is success",
+    "data": {
+		"ServiceA": 2837,
+        "ServiceB": 508,
+		"ServiceC": 208,
+        "EmployeeActive": 2837,
+        "EmployeeInActive": 508,
+        "countAllResign": 32,
+        "dataAllResign": {
+            "tanggal": [
+                "23-05-2025",
+                "01-06-2025",
+                "08-06-2025",
+                "19-06-2025",
+                "21-06-2025",
+                "25-06-2025",
+                "28-06-2025",
+                "01-07-2025",
+                "03-07-2025",
+                "05-07-2025",
+                "07-07-2025",
+                "09-07-2025",
+                "10-07-2025",
+                "13-07-2025",
+                "16-07-2025",
+                "17-07-2025",
+                "18-07-2025",
+                "19-07-2025"
+            ],
+            "data": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                2,
+                7,
+                1,
+                1,
+                1,
+                2,
+                3,
+                1,
+                1,
+                1,
+                4,
+                1
+            ]
+        },
+        "EmployeeInactiveLastMonth": 8,
+        "EmployeeInactiveThisMonth": 23,
+        "EmployeeInactiveThisMonthByGender": {
+            "label": [
+                "Laki - Laki",
+                "Perempuan"
+            ],
+            "total": [
+                11,
+                12
+            ]
+        },
+        "lineData": [
+            {
+                "name": "L",
+                "data": [
+                    {
+                        "x": "May 23 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 01 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 08 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 19 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 21 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 28 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 01 2025",
+                        "y": 4
+                    },
+                    {
+                        "x": "Jul 03 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 09 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 10 2025",
+                        "y": 2
+                    },
+                    {
+                        "x": "Jul 18 2025",
+                        "y": 3
+                    }
+                ]
+            },
+            {
+                "name": "belum pilih",
+                "data": [
+                    {
+                        "x": "Jun 01 2025",
+                        "y": 1
+                    }
+                ]
+            },
+            {
+                "name": "P",
+                "data": [
+                    {
+                        "x": "Jun 25 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jun 28 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 01 2025",
+                        "y": 3
+                    },
+                    {
+                        "x": "Jul 05 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 07 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 09 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 10 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 13 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 16 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 17 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 18 2025",
+                        "y": 1
+                    },
+                    {
+                        "x": "Jul 19 2025",
+                        "y": 1
+                    }
+                ]
+            }
+        ],
+        "dataTopReasonResign": {
+            "alasan": [
+                "Lainnya",
+                "Tidak boleh orang tua",
+                "Kabur",
+                "Molimo",
+                "Jam Kerja"
+            ],
+            "data": [
+                9,
+                6,
+                3,
+                3,
+                2
+            ]
+        },
+        "totalEmployeeRehire": 3,
+		"rehireData": [
+			{
+				"nik": "12345",
+				"nama": "John Doe",
+				"last_rehire_date": "2025-07-01"
+			},
+			{
+				"nik": "67890",
+				"nama": "Jane Smith",
+				"last_rehire_date": "2025-06-15"
+			},
+			{
+				"nik": "54321",
+				"nama": "Bob Johnson",
+				"last_rehire_date": "2025-05-20"
+			}
+		]
+    }
+}

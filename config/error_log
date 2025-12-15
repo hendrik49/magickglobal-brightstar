@@ -1,0 +1,216 @@
+[02-Nov-2025 13:03:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/cache.php on line 18
+[02-Nov-2025 15:31:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[02-Nov-2025 15:31:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[02-Nov-2025 15:45:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[02-Nov-2025 15:47:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/session.php on line 21
+[02-Nov-2025 15:47:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/magq7254/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/view.php on line 17
+[02-Nov-2025 15:47:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/queue.php on line 16
+[02-Nov-2025 15:47:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/broadcasting.php on line 18
+[02-Nov-2025 15:47:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/logging.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/logging.php on line 21
+[01-Dec-2025 17:53:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[01-Dec-2025 17:53:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[01-Dec-2025 17:53:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[01-Dec-2025 18:22:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[01-Dec-2025 18:22:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[01-Dec-2025 18:22:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[05-Dec-2025 08:42:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[05-Dec-2025 09:54:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[05-Dec-2025 18:47:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 15:35:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 15:35:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 15:35:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 15:35:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 15:35:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 15:35:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 15:35:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 15:35:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 15:35:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 15:35:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 15:35:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 15:35:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 16:22:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 16:22:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 16:22:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 16:22:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 16:22:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 16:22:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 16:22:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 16:22:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 16:22:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 16:22:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 16:22:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 16:22:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 17:29:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 17:29:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 17:29:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/database.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/database.php on line 19
+[07-Dec-2025 17:29:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 17:29:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 17:29:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/mail.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/mail.php on line 17
+[07-Dec-2025 17:29:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 17:29:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 17:29:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/app.php on line 18
+[07-Dec-2025 17:29:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 17:29:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
+[07-Dec-2025 17:29:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/magq7254/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/magq7254/public_html/config/services.php on line 18
