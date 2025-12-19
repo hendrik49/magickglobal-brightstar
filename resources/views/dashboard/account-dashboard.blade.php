@@ -389,7 +389,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-7">
+                <!-- <div class="col-xxl-7">
                     <div class="row gy-4 mb-4">
                         <div class="col-sm-6 col-12 dash-info-card">
                             <div class="info-card-inner card mb-0" style="z-index: auto; background: {{ @$settingDashoard->background_pelanggan }};">
@@ -510,7 +510,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-xxl-5">
                     <div class="card income-card">
                         <div class="card-header header-icon py-3">
