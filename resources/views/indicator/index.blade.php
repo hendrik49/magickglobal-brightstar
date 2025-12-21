@@ -74,7 +74,7 @@
                                 <th>{{__('Branch')}}</th>
                                 <th>{{__('Department')}}</th>
                                 <th>{{__('Designation')}}</th>
-                                <th>{{__('Overall Rating')}}</th>
+                                <th>{{__('Overall Progress')}}</th>
                                 <th>{{__('Added By')}}</th>
                                 <th>{{__('Created At')}}</th>
                                 @if( Gate::check('edit indicator') ||Gate::check('delete indicator') ||Gate::check('show indicator'))

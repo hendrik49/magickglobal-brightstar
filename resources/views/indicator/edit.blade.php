@@ -76,7 +76,7 @@
                     @if(\Auth::user()->type == 'HRD')
                     <div class="col-md-4 mb-2">
                         <div class="progress" style="height: 25px;">
-                            <div class="progress-bar" style="width:80%">80%</div>
+                            <div class="progress-bar" style="width:{{ $realisasi[$types->id]/$targets[$types->id]*100 }}%">{{ $realisasi[$types->id]/$targets[$types->id]*100 }} %</div>
                         </div>
                     </div>
                     @endif
