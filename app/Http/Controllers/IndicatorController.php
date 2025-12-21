@@ -88,9 +88,11 @@ class IndicatorController extends Controller
     public function show(Indicator $indicator)
     {
         $ratings = json_decode($indicator->rating, true);
+        $targets = json_decode($indicator->target, true);
+        $realisasi = json_decode($indicator->realisasi, true);
         $performance     = PerformanceType::where('created_by', '=', \Auth::user()->creatorId())->get();
 
-        return view('indicator.show', compact('indicator', 'ratings', 'performance'));
+        return view('indicator.show', compact('indicator','targets','realisasi', 'ratings', 'performance'));
     }
 
 
