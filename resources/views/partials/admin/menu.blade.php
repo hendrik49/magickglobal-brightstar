@@ -559,7 +559,7 @@
                                     </li>
                                 @endif
 
-                                @if (Gate::check('manage indicator') || Gate::check('manage appraisal') || Gate::check('manage goal tracking'))
+                                @if (Gate::check('manage indicator') || Gate::check('manage appraisal') || Gate::check('manage goal tracking') || Gate::check('manage interval value'))
                                     <li class="dash-item dash-hasmenu {{ Request::segment(1) == 'indicator' || Request::segment(1) == 'appraisal' || Request::segment(1) == 'goaltracking' ? 'active dash-trigger' : '' }}"
                                         href="#navbar-performance" data-toggle="collapse" role="button"
                                         aria-expanded="{{ Request::segment(1) == 'indicator' || Request::segment(1) == 'appraisal' || Request::segment(1) == 'goaltracking' ? 'true' : 'false' }}">
@@ -584,6 +584,13 @@
                                                     class="dash-item  {{ request()->is('goaltracking*') ? 'active' : '' }}">
                                                     <a class="dash-link"
                                                         href="{{ route('goaltracking.index') }}">{{ __('Goal Tracking') }}</a>
+                                                </li>
+                                            @endcan
+                                            @can('manage interval value')
+                                                <li
+                                                    class="dash-item {{ request()->is('intervalvalue*') ? 'active' : '' }}">
+                                                    <a class="dash-link"
+                                                        href="{{ route('intervalvalue.index') }}">{{ __('Interval value') }}</a>
                                                 </li>
                                             @endcan
                                         </ul>
@@ -694,7 +701,6 @@
                                         Gate::check('manage warning') ||
                                         Gate::check('manage termination') ||
                                         Gate::check('manage announcement') ||
-                                        Gate::check('manage interval value') ||
                                         Gate::check('manage holiday')) ||
                                         
                                     <li
@@ -757,13 +763,6 @@
                                                     class="dash-item {{ request()->is('announcement*') ? 'active' : '' }}">
                                                     <a class="dash-link"
                                                         href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>
-                                                </li>
-                                            @endcan
-                                            @can('manage interval value')
-                                                <li
-                                                    class="dash-item {{ request()->is('intervalvalue*') ? 'active' : '' }}">
-                                                    <a class="dash-link"
-                                                        href="{{ route('intervalvalue.index') }}">{{ __('Interval value') }}</a>
                                                 </li>
                                             @endcan
                                             @can('manage holiday')
