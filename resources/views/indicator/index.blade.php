@@ -74,6 +74,7 @@
                                 <th>{{__('Branch')}}</th>
                                 <th>{{__('Department')}}</th>
                                 <th>{{__('Designation')}}</th>
+                                <th>{{__('Periode')}}</th>
                                 <th>{{__('Overall Progress')}}</th>
                                 <th>{{__('Added By')}}</th>
                                 <th>{{__('Created At')}}</th>
@@ -90,6 +91,7 @@
                                     <td>{{ !empty($indicator->branches)?$indicator->branches->name:'' }}</td>
                                     <td>{{ !empty($indicator->departments)?$indicator->departments->name:'' }}</td>
                                     <td>{{ !empty($indicator->designations)?$indicator->designations->name:'' }}</td>
+                                    <td>{{ !empty($indicator->periode)?$indicator->periode:'' }}</td>
                                     <td>
                                     <div class="progress" style="height: 25px;">
                                         <div class="progress-bar" style="width:{{ $indicator->overallprogress }}%">{{ $indicator->overallprogress }} %</div>
