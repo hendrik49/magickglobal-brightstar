@@ -86,43 +86,15 @@
 
 
                             @foreach ($indicators as $indicator)
-
-                                @php
-                                    if(!empty($indicator->rating)){
-                                        $rating = json_decode($indicator->rating,true);
-                                        if(!empty($rating)){
-                                            $starsum = array_sum($rating);
-                                            $overallrating = $starsum/count($rating);
-                                        }else{
-                                                $overallrating = 0;
-                                        }
-
-                                    }
-                                    else{
-                                        $overallrating = 0;
-                                    }
-                                @endphp
                                 <tr>
                                     <td>{{ !empty($indicator->branches)?$indicator->branches->name:'' }}</td>
                                     <td>{{ !empty($indicator->departments)?$indicator->departments->name:'' }}</td>
                                     <td>{{ !empty($indicator->designations)?$indicator->designations->name:'' }}</td>
                                     <td>
-
-                                        @for($i=1; $i<=5; $i++)
-                                            @if($overallrating < $i)
-                                                @if(is_float($overallrating) && (round($overallrating) == $i))
-                                                    <i class="text-warning fas fa-star-half-alt"></i>
-                                                @else
-                                                    <i class="fas fa-star"></i>
-                                                @endif
-                                            @else
-                                                <i class="text-warning fas fa-star"></i>
-                                            @endif
-                                        @endfor
-                                        <span class="theme-text-color">({{number_format($overallrating,1)}})</span>
+                                    <div class="progress" style="height: 25px;">
+                                        <div class="progress-bar" style="width:{{ $indicator->overallprogress }}%">{{ $indicator->overallprogress }} %</div>
+                                    </div>
                                     </td>
-
-
                                     <td>{{ !empty($indicator->user)?$indicator->user->name:'' }}</td>
                                     <td>{{ \Auth::user()->dateFormat($indicator->created_at) }}</td>
                                     @if( Gate::check('edit indicator') ||Gate::check('delete indicator') || Gate::check('show indicator'))

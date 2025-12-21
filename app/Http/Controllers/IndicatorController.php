@@ -18,9 +18,34 @@ class IndicatorController extends Controller
             $user = \Auth::user();
             if ($user->type == 'Employee') {
                 $employee = Employee::where('user_id', $user->id)->first();
-                $indicators = Indicator::where('created_by', '=', $user->creatorId())->where('branch', $employee->branch_id)->where('department', $employee->department_id)->where('designation', $employee->designation_id)->with(['branches', 'departments', 'designations', 'user'])->get();
+                $indicators = Indicator::where('created_by', '=', $user->creatorId())->where('branch', $employee->branch_id)->where('department', $employee->department_id)->where('designation', $employee->designation_id)->with(['branches', 'departments', 'designations', 'user'])->get();         
             } else {
                 $indicators = Indicator::where('created_by', '=', $user->creatorId())->with(['branches', 'departments', 'designations', 'user'])->get();
+            }
+
+            foreach ($indicators as $indicator){
+                $overalltarget = $overallrealisasi = 0; 
+                if(!empty($indicator->target)){
+                    $target = json_decode($indicator->target,true);
+                    $realisasi = json_decode($indicator->realisasi,true);
+                    if(!empty($target)){
+                        $starsum = array_sum($target);
+                        $overalltarget = $starsum/count($target);
+                    }else{
+                        $overalltarget = 0;
+                    }
+
+                    if(!empty($realisasi)){
+                        $starsum = array_sum($realisasi);
+                        $overallrealisasi = $starsum/count($realisasi);
+                    }else{
+                        $overallrealisasi = 0;
+                    }
+                }
+                else{
+                    $overallrealisasi = $overalltarget = 0;
+                }
+                $indicator->overallprogress = $overalltarget == 0? 0 : ($overallrealisasi/$overalltarget)*100;
             }
 
             return view('indicator.index', compact('indicators'));
