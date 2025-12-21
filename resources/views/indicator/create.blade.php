@@ -1,7 +1,7 @@
 {{Form::open(array('url'=>'indicator','method'=>'post', 'class'=>'needs-validation', 'novalidate'))}}
 <div class="modal-body">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="form-group">
                 {{Form::label('branch',__('Branch'),['class'=>'form-label'])}}<x-required></x-required>
                 {{Form::select('branch',$brances,null,array('class'=>'form-control select','required'=>'required'))}}
@@ -15,38 +15,74 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
+                {{Form::label('tanggal',__('Tanggal'),['class'=>'form-label'])}}<x-required></x-required>
+                {{Form::date('tanggal', date('Y-m-d'), array('class'=>'form-control ','required' => 'required'))}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
                 {{Form::label('designation',__('Designation'),['class'=>'form-label'])}}<x-required></x-required>
                 <select class="select form-control select2-multiple" id="designation_id" name="designation" data-toggle="select2" data-placeholder="{{ __('Select Designation ...') }}" required>
                 </select>
             </div>
         </div>
-
+        <div class="col-md-6">
+            <div class="form-group">
+                {{Form::label('periode',__('Periode'),['class'=>'form-label'])}}<x-required></x-required>
+                <select class="select form-control select2-multiple" id="periode" name="periode" data-toggle="select2" data-placeholder="{{ __('Select Periode ...') }}" required>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </div>
+        </div>
     </div>
+    <hr class="mt-0">
+    <div class="row">
+        <div class="col-md-4">
+            <h6>Indikator</h6>
+        </div>
+        <div class="col-md-3">
+            <h6> Target</h6>
+        </div>
+        <div class="col-md-3">
+            <h6> Pencapaian</h6>
+        </div>
+        @if(\Auth::user()->type == 'HRD')
+        <div class="col-md-2">
+            <h6> Progress</h6>
+        </div>
+        @endif
+    </div>
+    <hr class="mt-1">
     @foreach($performance as $performances)
     <div class="row">
         <div class="col-md-12 mt-3">
-                    <h6>{{$performances->name}}</h6>
+            <h6>{{$performances->name}}</h6>
             <hr class="mt-0">
         </div>
-
         @foreach($performances->types as $types )
-            <div class="col-6">
-                    {{$types->name}}
-            </div>
-            <div class="col-6">
-                <fieldset id='demo1' class="rating">
-                    <input class="stars" type="radio" id="technical-5-{{$types->id}}" name="rating[{{$types->id}}]" value="5"/>
-                    <label class="full" for="technical-5-{{$types->id}}" title="Awesome - 5 stars"></label>
-                    <input class="stars" type="radio" id="technical-4-{{$types->id}}" name="rating[{{$types->id}}]" value="4"/>
-                    <label class="full" for="technical-4-{{$types->id}}" title="Pretty good - 4 stars"></label>
-                    <input class="stars" type="radio" id="technical-3-{{$types->id}}" name="rating[{{$types->id}}]" value="3"/>
-                    <label class="full" for="technical-3-{{$types->id}}" title="Meh - 3 stars"></label>
-                    <input class="stars" type="radio" id="technical-2-{{$types->id}}" name="rating[{{$types->id}}]" value="2"/>
-                    <label class="full" for="technical-2-{{$types->id}}" title="Kinda bad - 2 stars"></label>
-                    <input class="stars" type="radio" id="technical-1-{{$types->id}}" name="rating[{{$types->id}}]" value="1"/>
-                    <label class="full" for="technical-1-{{$types->id}}" title="Sucks big time - 1 star"></label>
-                </fieldset>
-            </div>
+        <div class="col-4">
+            {{$types->name}}
+        </div>
+        <div class="col-8">
+            <fieldset id='demo1'>
+                <div class="row">
+                    <div class="col-4 mb-2">
+                        <input type="number" name="target[{{$types->id}}]" id="target-{{$types->id}}" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                    </div>
+                    <div class="col-4 mb-2">
+                        <input type="number" name="realisasi[{{$types->id}}]" id="realisasi-{{$types->id}}" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                    </div>
+                    @if(\Auth::user()->type == 'HRD')
+                    <div class="col-4 mb-2">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar" style="width:80%">80%</div>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+            </fieldset>
+        </div>
         @endforeach
     </div>
     @endforeach
