@@ -159,7 +159,9 @@ use App\Http\Controllers\EProcurementController;
 use App\Http\Controllers\KoperasiController;
 use App\Http\Controllers\TapController;
 use App\Http\Controllers\IncomingMailController;
+use App\Http\Controllers\IntervalValueController;
 use App\Http\Controllers\OutgoingMailController;
+use App\Models\IntervalValue;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
@@ -1005,6 +1007,7 @@ Route::group(['middleware' => ['verified']], function () {
 
     Route::resource('awardtype', AwardTypeController::class)->middleware(['auth', 'XSS']);
     Route::resource('award', AwardController::class)->middleware(['auth', 'XSS']);
+    Route::resource('intervalvalue', IntervalValueController::class)->middleware(['auth', 'XSS']);
     Route::resource('resignation', ResignationController::class)->middleware(['auth', 'XSS']);
     Route::resource('travel', TravelController::class)->middleware(['auth', 'XSS']);
     Route::resource('promotion', PromotionController::class)->middleware(['auth', 'XSS']);
