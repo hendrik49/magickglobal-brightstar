@@ -47,11 +47,6 @@
         <div class="col-md-3">
             <h6> Pencapaian</h6>
         </div>
-        @if(\Auth::user()->type == 'HRD')
-        <div class="col-md-2">
-            <h6> Progress</h6>
-        </div>
-        @endif
     </div>
     <hr class="mt-1">
     @foreach($performance as $performances)
@@ -73,13 +68,6 @@
                     <div class="col-4 mb-2">
                         <input type="number" name="realisasi[{{$types->id}}]" id="realisasi-{{$types->id}}" @if(\Auth::user()->type != 'Employee') readonly @endif>
                     </div>
-                    @if(\Auth::user()->type == 'HRD')
-                    <div class="col-4 mb-2">
-                        <div class="progress" style="height: 25px;">
-                            <div class="progress-bar" style="width:80%">80%</div>
-                        </div>
-                    </div>
-                    @endif
                 </div>
             </fieldset>
         </div>
