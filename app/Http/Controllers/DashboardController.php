@@ -91,7 +91,7 @@ class DashboardController extends Controller
             } elseif (Auth::user()->type == 'eprocurement') {
                 return redirect()->route('eprocurement.dashboard.view');
             }else {
-                if (\Auth::user()->can('show account dashboard')) {
+                if (Auth::user()->can('show account dashboard')) {
                     $data['latestIncome'] = Revenue::with(['customer'])->where('created_by', '=', \Auth::user()->creatorId())->orderBy('id', 'desc')->limit(5)->get();
                     $data['latestExpense'] = Payment::with(['vender'])->where('created_by', '=', \Auth::user()->creatorId())->orderBy('id', 'desc')->limit(5)->get();
                     $currentYer = date('Y');
@@ -193,8 +193,6 @@ class DashboardController extends Controller
                 return view('admin.dashboard');
             } else {
                 $home_data = [];
-//                dd($user->projects());
-
                 $user_projects = $user->projects()->pluck('project_id')->toArray();
 
                 $project_tasks = ProjectTask::whereIn('project_id', $user_projects)->get();
@@ -254,7 +252,6 @@ class DashboardController extends Controller
                 foreach (Project::$project_status as $k => $v) {
 
                     $project_status[$k]['total'] = $user->projects->where('status', 'LIKE', $k)->count();
-//                    dd($project_status[$k]['total']    );
                     $project_status[$k]['percentage'] = Utility::getPercentage($project_status[$k]['total'], $total_project);
                 }
                 $home_data['project_status'] = $project_status;
@@ -270,7 +267,6 @@ class DashboardController extends Controller
                 return view('dashboard.project-dashboard', compact('home_data'));
             }
         } else {
-
             return $this->account_dashboard_index();
         }
     }
@@ -279,10 +275,8 @@ class DashboardController extends Controller
     {
 
         if (Auth::check()) {
-
+            $user = Auth::user();
             if (\Auth::user()->can('show hrm dashboard')) {
-
-                $user = Auth::user();
 
                 if ($user->type != 'client' && $user->type != 'company') {
                     $emp = Employee::where('user_id', '=', $user->id)->first();
@@ -388,7 +382,6 @@ class DashboardController extends Controller
                     return view('dashboard.dashboard', compact('arrEvents', 'onGoingTraining', 'activeJob', 'inActiveJOb', 'doneTraining', 'announcements', 'employees', 'meetings', 'countTrainer', 'countClient', 'countUser', 'notClockIns'));
                 }
             } else {
-
                 return $this->project_dashboard_index();
             }
         } else {
