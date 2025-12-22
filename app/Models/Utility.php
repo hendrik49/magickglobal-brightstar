@@ -4482,16 +4482,16 @@ class Utility extends Model
         if (self::$getRatingData == null) {
             $indicator = Indicator::where('designation', $designationid)->first();
 
-            if (!empty($indicator->rating) && ($competencyCount != 0)) {
-                $rating = json_decode($indicator->rating, true);
-                $starsum = array_sum($rating);
+            if (!empty($indicator->target) && ($competencyCount != 0)) {
+                $target = json_decode($indicator->target, true);
+                $starsum = array_sum($target);
 
-                $overallrating = $starsum / $competencyCount;
+                $overalltarget = $starsum / $competencyCount;
             } else {
-                $overallrating = 0;
+                $overalltarget = 0;
             }
 
-            self::$getRatingData = $overallrating;
+            self::$getRatingData = $overalltarget;
         }
 
         return self::$getRatingData;
