@@ -78,6 +78,8 @@ class AppraisalController extends Controller
             $appraisal->employee       = $request->employee;
             $appraisal->appraisal_date = $request->appraisal_date;
             $appraisal->rating         = json_encode($request->rating, true);
+            $appraisal->target         = json_encode($request->target, true);
+            $appraisal->realisasi      = json_encode($request->realisasi, true);
             $appraisal->remark         = $request->remark;
             $appraisal->created_by     = \Auth::user()->creatorId();
             $appraisal->save();
@@ -146,6 +148,8 @@ class AppraisalController extends Controller
             $appraisal->employee       = $request->employee;
             $appraisal->appraisal_date = $request->appraisal_date;
             $appraisal->rating         = json_encode($request->rating, true);
+            $appraisal->target         = json_encode($request->target, true);
+            $appraisal->realisasi      = json_encode($request->realisasi, true);
             $appraisal->remark         = $request->remark;
             $appraisal->save();
 
