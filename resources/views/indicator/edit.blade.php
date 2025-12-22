@@ -68,10 +68,10 @@
             <fieldset id='demo1'>
                 <div class="row">
                     <div class="col-md-4 mb-2">
-                        <input class="form-control" type="number" value="{{$targets[$types->id]}}" name="target" id="target" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                        <input class="form-control" type="number" value="{{$targets[$types->id]}}" name="target" id="target">
                     </div>
                     <div class="col-md-4 mb-2">
-                        <input class="form-control" type="number" value="{{$realisasi[$types->id]}}" name="realisasi" id="realisasi" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                        <input class="form-control" type="number" value="{{$realisasi[$types->id]}}" name="realisasi" id="realisasi">
                     </div>
                     @if(\Auth::user()->type == 'HRD')
                     <div class="col-md-4 mb-2">

@@ -19,6 +19,8 @@ class Appraisal extends Model
         'remark',
         'created_by',
         'rating',
+        'target',
+        'realisasi'
     ];
 
     public static $technical = [
