@@ -9,6 +9,8 @@ class Indicator extends Model
     protected $fillable = [
         'branch',
         'designation',
+        'tanggal',
+        'periode',
         'customer_experience',
         'marketing',
         'administration',
@@ -18,6 +20,9 @@ class Indicator extends Model
         'created_by',
         'created_user',
         'rating',
+        'target',
+        'realisasi',
+
     ];
 
     public static $technical = [
