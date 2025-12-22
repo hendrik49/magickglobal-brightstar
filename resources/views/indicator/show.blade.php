@@ -12,39 +12,55 @@
                 <span>{{ !empty($indicator->departments)?$indicator->departments->name:'' }}</span>
             </div>
         </div>
-        <div class="col-md-6 mt-3">
-            <div class="info text-sm font-style">
-                <strong>{{__('Designation')}} : </strong>
-                <span>{{ !empty($indicator->designations)?$indicator->designations->name:'' }}</span>
+        <div class="col-md-6">
+            <div class="info text-sm">
+                <strong>{{__('Tanggal')}} : </strong>
+                <span>{{ !empty($indicator->tanggal)?$indicator->tanggal:'' }}</span>
             </div>
         </div>
-
+        <div class="col-md-6">
+            <div class="info text-sm">
+                <strong>{{__('Designation')}} : </strong>
+                <span>{{ !empty($indicator->designations)?$indicator->designations->name:''}}</span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info text-sm">
+                <strong>{{__('Periode')}} : </strong>
+                <span>{{ !empty($indicator->periode)?$indicator->periode:''}}</span>
+            </div>
+        </div>
     </div>
 
     @foreach($performance as $performances)
     <div class="row">
         <div class="col-md-12 mt-3">
-            <h6 class="mb-3">{{$performances->name}}</h6>
+            <h6>{{$performances->name}}</h6>
             <hr class="mt-0">
         </div>
-        @foreach($performances->types as $types)
-            <div class="col-6">
-                {{$types->name}}
-            </div>
-            <div class="col-6">
-                <fieldset id='demo1' class="rating">
-                    <input class="stars" type="radio" id="technical-5-{{$types->id}}" name="rating[{{$types->id}}]" value="5" {{ (isset($ratings[$types->id]) && $ratings[$types->id] == 5)? 'checked':''}} disabled>
-                    <label class="full" for="technical-5-{{$types->id}}" title="Awesome - 5 stars"></label>
-                    <input class="stars" type="radio" id="technical-4-{{$types->id}}" name="rating[{{$types->id}}]" value="4" {{ (isset($ratings[$types->id]) && $ratings[$types->id] == 4)? 'checked':''}} disabled>
-                    <label class="full" for="technical-4-{{$types->id}}" title="Pretty good - 4 stars"></label>
-                    <input class="stars" type="radio" id="technical-3-{{$types->id}}" name="rating[{{$types->id}}]" value="3" {{ (isset($ratings[$types->id]) && $ratings[$types->id] == 3)? 'checked':''}} disabled>
-                    <label class="full" for="technical-3-{{$types->id}}" title="Meh - 3 stars"></label>
-                    <input class="stars" type="radio" id="technical-2-{{$types->id}}" name="rating[{{$types->id}}]" value="2" {{ (isset($ratings[$types->id]) && $ratings[$types->id] == 2)? 'checked':''}} disabled>
-                    <label class="full" for="technical-2-{{$types->id}}" title="Kinda bad - 2 stars"></label>
-                    <input class="stars" type="radio" id="technical-1-{{$types->id}}" name="rating[{{$types->id}}]" value="1" {{ (isset($ratings[$types->id]) && $ratings[$types->id] == 1)? 'checked':''}} disabled>
-                    <label class="full" for="technical-1-{{$types->id}}" title="Sucks big time - 1 star"></label>
-                </fieldset>
-            </div>
+        @foreach($performances->types as $types )
+        <div class="col-md-4">
+            {{$types->name}}
+        </div>
+        <div class="col-md-8">
+            <fieldset id='demo1'>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <input type="number" value="{{$targets[$types->id]}}" name="target" id="target" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <input type="number" value="{{$realisasi[$types->id]}}" name="realisasi" id="realisasi" @if(\Auth::user()->type != 'Employee') readonly @endif>
+                    </div>
+                    @if(\Auth::user()->type == 'HRD')
+                    <div class="col-md-4 mb-2">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar" style="width:{{ $realisasi[$types->id]/$targets[$types->id]*100 }}%">{{ $realisasi[$types->id]/$targets[$types->id]*100 }} %</div>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+            </fieldset>
+        </div>
         @endforeach
     </div>
     @endforeach
