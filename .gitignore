@@ -1,5 +1,4 @@
 /.idea
-/.vscode
 
 /vendor/
 node_modules/
@@ -19,7 +18,6 @@ public_html/storage
 public_html/hot
 
 storage/*.key
-.env
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -28,7 +26,6 @@ Homestead.json
 /public/build
 /storage/pail
 .env.backup
-.env.production
 .phpactor.json
 auth.json
 storage/
@@ -37,3 +34,4 @@ composer-setup.php
 Modules/LandingPage/Resources/assets/images/front/*
 public/.DS_Store
 resources/**/.DS_Store
+config.bat
