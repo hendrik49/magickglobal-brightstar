@@ -78,6 +78,8 @@ class AppraisalController extends Controller
             $appraisal->employee       = $request->employee;
             $appraisal->appraisal_date = $request->appraisal_date;
             $appraisal->rating         = json_encode($request->rating, true);
+            $appraisal->target         = json_encode($request->target, true);
+            $appraisal->realisasi      = json_encode($request->realisasi, true);
             $appraisal->remark         = $request->remark;
             $appraisal->created_by     = \Auth::user()->creatorId();
             $appraisal->save();
@@ -146,6 +148,8 @@ class AppraisalController extends Controller
             $appraisal->employee       = $request->employee;
             $appraisal->appraisal_date = $request->appraisal_date;
             $appraisal->rating         = json_encode($request->rating, true);
+            $appraisal->target         = json_encode($request->target, true);
+            $appraisal->realisasi      = json_encode($request->realisasi, true);
             $appraisal->remark         = $request->remark;
             $appraisal->save();
 
@@ -177,14 +181,19 @@ class AppraisalController extends Controller
     public function empByStar(Request $request)
     {
         $employee = Employee::find($request->employee);
+        if(empty($employee)){
+            return response()->json(array('success' => false, 'html'=> null));   
+        }
 
         $indicator = Indicator::where('branch',$employee->branch_id)->where('department',$employee->department_id)->where('designation',$employee->designation_id)->first();
 
-        $ratings = !empty($indicator)? json_decode($indicator->rating, true):[];
+        $targets = !empty($indicator)? json_decode($indicator->target, true):[];
+        $realisasi = !empty($indicator)? json_decode($indicator->realisasi, true):[];
+        $rating = !empty($indicator)? json_decode($indicator->rating, true):[];
 
         $performance_types = PerformanceType::where('created_by', '=', \Auth::user()->creatorId())->get();
 
-        $viewRender = view('appraisal.star', compact('ratings','performance_types'))->render();
+        $viewRender = view('appraisal.star', compact('rating','targets','realisasi','performance_types'))->render();
         // dd($viewRender);
         return response()->json(array('success' => true, 'html'=>$viewRender));
 

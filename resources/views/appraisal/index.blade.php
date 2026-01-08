@@ -76,6 +76,7 @@
                                 <th>{{__('Department')}}</th>
                                 <th>{{__('Designation')}}</th>
                                 <th>{{__('Employee')}}</th>
+                                <th>{{__('Periode')}}</th>
                                 <th>{{ __('Target Rating') }}</th>
                                 <th>{{__('Overall Rating')}}</th>
                                 <th>{{__('Appraisal Date')}}</th>
@@ -114,6 +115,7 @@
                                 <tr>
                                     <td>{{ !empty($appraisal->branches)?$appraisal->branches->name:'' }}</td>
                                     <td>{{ !empty($appraisal->employees)?!empty($appraisal->employees->department)?$appraisal->employees->department->name:'':'' }}</td>
+                                    <td>{{ !empty($appraisal->employees)?!empty($appraisal->employees->designation)?$appraisal->employees->designation->name:'':'' }}</td>
                                     <td>{{ !empty($appraisal->employees)?!empty($appraisal->employees->designation)?$appraisal->employees->designation->name:'':'' }}</td>
                                     <td>{{!empty($appraisal->employees)?$appraisal->employees->name:'' }}</td>
 
